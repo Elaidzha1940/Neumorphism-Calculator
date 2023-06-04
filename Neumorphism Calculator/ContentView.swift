@@ -11,13 +11,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            
+            Rectangle()
+                .foregroundColor(.gray.opacity(0.9))
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
@@ -25,4 +25,9 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct BrightShadow: View {
+    
+    var_radius
 }
