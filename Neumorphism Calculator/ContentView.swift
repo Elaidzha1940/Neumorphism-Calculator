@@ -27,9 +27,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct BrightShadow: View {
+struct BrightShadow: ViewModifier {
     
-    var _radius : CGFloat
+    var _radius: CGFloat
     var _topShadowX: CGFloat
     var _topShadowY: CGFloat
     var _bottomShadowX: CGFloat
@@ -46,7 +46,9 @@ struct BrightShadow: View {
     }
     
     func body(content: Content) -> some View {
-        
+        return content.shadow(color: .white.opacity(0.75),
+                              radius: _radius, x: _topShadowX, y: _topShadowY)
+        .shadow(color: .blue, radius: _radius, x: _bottomShadowX, y: _bottomShadowY)
         
     }
 }
