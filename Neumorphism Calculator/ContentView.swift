@@ -29,5 +29,24 @@ struct ContentView_Previews: PreviewProvider {
 
 struct BrightShadow: View {
     
-    var_radius
+    var _radius : CGFloat
+    var _topShadowX: CGFloat
+    var _topShadowY: CGFloat
+    var _bottomShadowX: CGFloat
+    var _bottomShadowY: CGFloat
+    
+    init(radius : CGFloat, _topShadowX: CGFloat, _topShadowY: CGFloat, _bottomShadowX: CGFloat, _bottomShadowY: CGFloat) {
+        
+        _radius = radius
+        _topShadowX = topShadowX
+        _topShadowY = topShadowY
+        _bottomShadowX = bottomShadowX
+        _bottomShadowY = bottomShadowY
+        
+    }
+    
+    func body(content: Content) -> some View {
+        
+        
+    }
 }
