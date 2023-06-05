@@ -19,6 +19,7 @@ struct ContentView: View {
             
             VStack(alignment: .center, spacing: 20) {
                 
+                //MARK: Large Calculator Bytton
                 ZStack {
                     RoundedRectangle(cornerRadius: 40)
                         .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
@@ -26,12 +27,27 @@ struct ContentView: View {
                         .modifier(BrightShadow(radius: 10, topShadowX: -10, topShadowY: -10, bottomShadowX: 10, bottomShadowY: 10))
                     
                     HStack {
+                        
+                        Spacer()
+                        
                         Text("400")
                             .bold()
                             .font(.custom("", size: 30))
                             .multilineTextAlignment(.trailing)
+                        
+                        Spacer()
+                            .frame(width: 40, height: nil, alignment: .center)
                     }
                 }
+            }
+            
+            //MARK: Row 1
+            HStack(alignment: .center, spacing: 20) {
+                
+                CalculatorButton(text: "AC", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.height / 6, fontSize: 15)
+                CalculatorButton(text: "+/-", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.height / 6, fontSize: 15)
+                CalculatorButton(text: "%", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.height / 6, fontSize: 15)
+                CalculatorButton(text: "/", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.height / 6, fontSize: 15)
             }
         }
         .ignoresSafeArea()
