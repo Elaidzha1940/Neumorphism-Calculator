@@ -23,7 +23,14 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 40)
                         .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
                         .foregroundColor(.blue)
+                        .modifier(BrightShadow(radius: 10, topShadowX: -10, topShadowY: -10, bottomShadowX: 10, bottomShadowY: 10))
                     
+                    HStack {
+                        Text("400")
+                            .bold()
+                            .font(.custom("", size: 30))
+                            .multilineTextAlignment(.trailing)
+                    }
                 }
             }
         }
