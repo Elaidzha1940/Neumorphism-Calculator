@@ -17,7 +17,15 @@ struct ContentView: View {
             Rectangle()
                 .foregroundColor(.gray.opacity(0.9))
             
-            CalculatorButton(text: "Пидорас", shadowRadius: 10, textColor: .black, width: 100, height: 100, fontSize: 20)
+            VStack(alignment: .center, spacing: 20) {
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 40)
+                        .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
+                        .foregroundColor(.blue)
+                    
+                }
+            }
         }
         .ignoresSafeArea()
     }
