@@ -52,3 +52,31 @@ struct BrightShadow: ViewModifier {
         
     }
 }
+
+struct CalculatorButton: View {
+    
+    var _text: String
+    var _shadowRadius: CGFloat
+    var _textColor: Color
+    var _fontSize: CGFloat
+    var _width: CGFloat
+    var _height: CGFloat
+    
+    init(text: String, shadowRadius: CGFloat, textColor: Color, width: CGFloat, height: CGFloat, fontSize: CGFloat) {
+        
+        _text = text
+        _shadowRadius = shadowRadius
+        _width = width
+        _height = height
+        _fontSize = fontSize
+    
+    }
+    
+    var body: some View {
+        
+        ZStack {
+            RoundedRectangle(cornerRadius: _height / 2)
+                .frame(width: <#T##CGFloat?#>)
+        }
+    }
+}
