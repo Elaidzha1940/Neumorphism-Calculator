@@ -17,7 +17,7 @@ struct ContentView: View {
             Rectangle()
                 .foregroundColor(.gray.opacity(0.9))
             
-            CalculatorButton(text: "Hi", shadowRadius: 10, textColor: .black, width: 100, height: 100, fontSize: 20)
+            CalculatorButton(text: "Пидорас", shadowRadius: 10, textColor: .black, width: 100, height: 100, fontSize: 20)
         }
         .ignoresSafeArea()
     }
@@ -37,7 +37,7 @@ struct BrightShadow: ViewModifier {
     var _bottomShadowX: CGFloat
     var _bottomShadowY: CGFloat
     
-    init(radius : CGFloat, _topShadowX: CGFloat, _topShadowY: CGFloat, _bottomShadowX: CGFloat, _bottomShadowY: CGFloat) {
+    init(radius : CGFloat, topShadowX: CGFloat, topShadowY: CGFloat, bottomShadowX: CGFloat, bottomShadowY: CGFloat) {
         
         _radius = radius
         _topShadowX = topShadowX
@@ -71,6 +71,7 @@ struct CalculatorButton: View {
         _width = width
         _height = height
         _fontSize = fontSize
+        _textColor = textColor
     
     }
     
@@ -80,9 +81,10 @@ struct CalculatorButton: View {
             RoundedRectangle(cornerRadius: _height / 2)
                 .frame(width: _width, height: _height, alignment: .center)
                 .foregroundColor(.blue)
-                .modifier(BrightShadow(radius: _shadowRadius, _topShadowX: _shadowRadius, _topShadowY: _shadowRadius, _bottomShadowX: _shadowRadius, _bottomShadowY: _shadowRadius))
+                .modifier(BrightShadow(radius: _shadowRadius, topShadowX: _shadowRadius, topShadowY: _shadowRadius, bottomShadowX: _shadowRadius, bottomShadowY: _shadowRadius))
             
             Text(_text)
+                .foregroundColor(_textColor )
                 .font(.custom("", size: _fontSize))
         }
     }
