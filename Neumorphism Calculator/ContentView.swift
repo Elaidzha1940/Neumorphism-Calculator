@@ -76,7 +76,9 @@ struct CalculatorButton: View {
         
         ZStack {
             RoundedRectangle(cornerRadius: _height / 2)
-                .frame(width: <#T##CGFloat?#>)
+                .frame(width: _width, height: _height, alignment: .center)
+                .foregroundColor(.blue)
+                .modifier(BrightShadow(radius: _shadowRadius, _topShadowX: _shadowRadius, _topShadowY: _shadowRadius, _bottomShadowX: _shadowRadius, _bottomShadowY: _shadowRadius))
         }
     }
 }
