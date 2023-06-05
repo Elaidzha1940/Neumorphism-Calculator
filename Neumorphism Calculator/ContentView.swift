@@ -53,10 +53,10 @@ struct ContentView: View {
                 //MARK: Row 2
                 HStack(alignment: .center, spacing: 20) {
                     
-                    CalculatorButton(text: "AC", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
-                    CalculatorButton(text: "+/-", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
-                    CalculatorButton(text: "%", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
-                    CalculatorButton(text: "/", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "7", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "8", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "9", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "x", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
                 }
                 
                 //MARK: Row 3
@@ -75,6 +75,15 @@ struct ContentView: View {
                     CalculatorButton(text: "2", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
                     CalculatorButton(text: "3", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
                     CalculatorButton(text: "+", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                }
+                
+                //MARK: Row 5
+                HStack(alignment: .center, spacing: 20) {
+                    
+                    CalculatorButton(text: ".", shadowRadius: 5, textColor: .black, width: 170, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "+", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                    CalculatorButton(text: "=", shadowRadius: 5, textColor: .black, width: UIScreen.main.bounds.width / 6, height: UIScreen.main.bounds.width / 6, fontSize: 15)
+                  
                 }
             }
         }
