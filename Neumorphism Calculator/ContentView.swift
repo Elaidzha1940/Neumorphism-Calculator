@@ -16,6 +16,8 @@ struct ContentView: View {
             
             Rectangle()
                 .foregroundColor(.gray.opacity(0.9))
+            
+            CalculatorButton(text: "Hi", shadowRadius: 10, textColor: .black, width: 100, height: 100, fontSize: 20)
         }
         .ignoresSafeArea()
     }
@@ -79,6 +81,9 @@ struct CalculatorButton: View {
                 .frame(width: _width, height: _height, alignment: .center)
                 .foregroundColor(.blue)
                 .modifier(BrightShadow(radius: _shadowRadius, _topShadowX: _shadowRadius, _topShadowY: _shadowRadius, _bottomShadowX: _shadowRadius, _bottomShadowY: _shadowRadius))
+            
+            Text(_text)
+                .font(.custom("", size: _fontSize))
         }
     }
 }
